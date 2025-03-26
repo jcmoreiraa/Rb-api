@@ -1,0 +1,24 @@
+<h1>CSV Dados Processados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @arrays.each do |row| %>
+      <tr>
+        <td><%= row[0] %></td>
+        <td><%= row[1] %></td>
+        <td><%= row[2] %></td>
+        <td><%= row[3] %></td>
+        <td><%= row[4] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
