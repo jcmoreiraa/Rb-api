@@ -2,11 +2,11 @@ class CsvProcessorController < ApplicationController
   require 'csv'
   
   def process_csv
-    caminho = "/home/julio/ruby/minha_api/db/data/cu.csv"  
+    file_path = Rails.root.join('db', 'data', 'cu.csv').to_s
 
     arrays = []
 
-    CSV.foreach(caminho, headers: false, col_sep: ",") do |row|
+    CSV.foreach(file_path, headers: false, col_sep: ",") do |row|
       arrays << row 
       puts row.inspect
     end
