@@ -2,7 +2,7 @@ class CsvProcessorController < ApplicationController
   require 'csv'
   
   def process_csv
-    caminho = "/home/julio/ruby/cu.csv"  
+    caminho = "/home/julio/ruby/minha_api/db/data/cu.csv"  
 
     arrays = []
 
@@ -11,6 +11,6 @@ class CsvProcessorController < ApplicationController
       puts row.inspect
     end
 
-    render json: { status: 'success', data: arrays }
+    render json: { status: :success, data: arrays }
   end
 end

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   post '/users/create_many', to: 'users#createMany'
   get '/csv_processor/process_csv', to: 'csv_processor#process_csv'
   root 'csv_processor#process_csv'  
+  get '/index', to: 'users#index'
+  
 
   
 
