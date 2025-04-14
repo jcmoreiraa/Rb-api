@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :users
   post '/users/create_many', to: 'users#createMany'
-  get '/csv_processor/process_csv', to: 'csv_processor#process_csv'
-  root 'csv_processor#process_csv'  
+  get '/csv_processor/process_csv/:senha', to: 'csv_processor#process_csv'
+  get ':senha', to: 'csv_processor#process_csv', as: :root
   get '/index', to: 'users#index'
   
 
